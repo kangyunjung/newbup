@@ -47,7 +47,7 @@ export const GeminiService = {
 
       // Use gemini-3-flash-preview for basic text tasks
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-1.5-flash',
         contents: prompt,
       });
       return response.text || "분석을 완료할 수 없습니다.";
@@ -73,7 +73,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image',
+        model: 'gemini-1.5-flash',
         contents: {
           parts: [{ text: prompt }]
         },
@@ -109,7 +109,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-1.5-flash',
         contents: prompt,
       });
 
@@ -161,7 +161,7 @@ export const GeminiService = {
 
       // Use gemini-3-pro-preview for complex reasoning tasks
       const response = await ai.models.generateContent({
-        model: 'gemini-3-pro-preview',
+        model: 'gemini-1.5-pro',
         contents: prompt,
       });
       
@@ -198,7 +198,7 @@ export const GeminiService = {
 
       // Use gemini-3-pro-preview for complex reasoning tasks
       const response = await ai.models.generateContent({
-        model: 'gemini-3-pro-preview',
+        model: 'gemini-1.5-pro',
         contents: prompt,
       });
       
@@ -229,7 +229,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image',
+        model: 'gemini-1.5-flash',
         contents: {
           parts: [{ text: prompt }]
         },
@@ -291,7 +291,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-3-pro-image-preview',
+        model: 'gemini-1.5-pro',
         contents: {
           parts: [{ text: prompt }]
         },

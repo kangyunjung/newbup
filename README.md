@@ -10,11 +10,25 @@ View your app in AI Studio: https://ai.studio/apps/8dd47a49-87fd-4aea-ae57-2a04d
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js (v18+)
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+   ```bash
+   npm install
+   ```
+2. Set the `GEMINI_API_KEY`:
+   - `.env.example` 파일을 복사하여 `.env.local` 파일을 만듭니다.
+   - [Google AI Studio](https://aistudio.google.com/)에서 발급받은 API 키를 `.env.local` 파일에 입력합니다.
+   ```bash
+   cp .env.example .env.local
+   ```
 3. Run the app:
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
+
+## Production Deployment (Vercel)
+
+Vercel 등에 배포할 때는 환경 변수(Environment Variables) 설정 메뉴에서 다음 항목을 추가해 주세요:
+- `GEMINI_API_KEY`: Google AI Studio에서 발급받은 API 키
+- `API_KEY`: (호환성을 위해 필요한 경우 추가)

@@ -37,17 +37,17 @@ export const GeminiService = {
         - 현재 기분/상태(키워드): ${keyword}
         - 최근 일과 및 일상: ${dailyLife}
         - 오늘의 컨디션 점수: ${condition}점 (100점 만점)
-
+ 
         [요청사항]
         - 3~4줄 내외로 간결하게 작성하세요.
         - "당신은 ~입니다" 톤으로 작성하세요.
         - 참가자의 일상, 소속, 그리고 **컨디션 점수**를 자연스럽게 언급하며 공감대를 형성해주세요.
         - 점수가 높다면 에너지를 강조하고, 낮다면 격려와 함께 내재된 잠재력을 칭찬해주세요.
       `;
-
+ 
       // Use gemini-3-flash-preview for basic text tasks
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-3-flash-preview',
         contents: prompt,
       });
       return response.text || "분석을 완료할 수 없습니다.";
@@ -73,7 +73,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-2.5-flash-image',
         contents: {
           parts: [{ text: prompt }]
         },
@@ -109,7 +109,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-3-flash-preview',
         contents: prompt,
       });
 
@@ -161,7 +161,7 @@ export const GeminiService = {
 
       // Use gemini-3-pro-preview for complex reasoning tasks
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-pro',
+        model: 'gemini-3-pro-preview',
         contents: prompt,
       });
       
@@ -198,7 +198,7 @@ export const GeminiService = {
 
       // Use gemini-3-pro-preview for complex reasoning tasks
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-pro',
+        model: 'gemini-3-pro-preview',
         contents: prompt,
       });
       
@@ -229,7 +229,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-flash',
+        model: 'gemini-2.5-flash-image',
         contents: {
           parts: [{ text: prompt }]
         },
@@ -291,7 +291,7 @@ export const GeminiService = {
       `;
 
       const response = await ai.models.generateContent({
-        model: 'gemini-1.5-pro',
+        model: 'gemini-3-pro-image-preview',
         contents: {
           parts: [{ text: prompt }]
         },
